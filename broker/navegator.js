@@ -3,18 +3,22 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Component1 from './components/home.js';
 import Component2 from './components/login.js';
-import Component3 from './components/registro.js';
+import registro from './components/registro.js';
+import  lista  from './components/listaacciones.js';
+import  edicionuser from './components/edicionuser.js';
 
 const Stack = createStackNavigator();
 
 const Navigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Component1">
+      <Stack.Navigator initialRouteName="edicionuser">
        
         <Stack.Screen name="Component1" component={Component1} />
         <Stack.Screen name="Component2" component={Component2} />
-        <Stack.Screen name="Component3" component={Component3} />
+        <Stack.Screen name="registro" component={registro} />
+        <Stack.Screen name="lista" component={lista} />
+        <Stack.Screen name="edicionuser" component={edicionuser} />
       </Stack.Navigator>
     </NavigationContainer>
   );
